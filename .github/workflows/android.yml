@@ -28,8 +28,8 @@ jobs:
      - name: Build Debug .apk
        run: |
         # Build the launcher
-        ./gradlew :app_mclientresign:assembleDebug
-        mv app_mclientresign/build/outputs/apk/debug/app_mclientresign-debug.apk out/app-debug.apk
+        ./gradlew :mclientresign:assembleDebug
+        mv mclientresign/build/outputs/apk/debug/mclientresign-debug.apk out/app-debug.apk
        
      - name: Upload APK
        uses: actions/upload-artifact@v2
