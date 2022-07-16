@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "APK Editor"
+rootProject.name = "MClient ReSign"
