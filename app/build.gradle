@@ -28,11 +28,11 @@ android {
     flavorDimensions "release"
     productFlavors {
         play {
-            applicationId "com.apk.explorer"
+            applicationId "com.mclient.resign"
             dimension "release"
         }
         full {
-            applicationId "com.apk.editor"
+            applicationId "com.mclient.resigner"
             dimension "release"
         }
     }
