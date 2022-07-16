@@ -2,7 +2,7 @@
     tab1 { padding-left: 4em; }
 </style>
 
-<p style="text-align: justify;"><tab1>Welcome to the documentation page of <b>APK Explorer & Editor</b> (AEE), an open-source tool to explore and navigate through the contents of any installed APK file on an Android device.This page explains the basic usage of AEE in detail.</tab1></p>
+<p style="text-align: justify;"><tab1>Welcome to the documentation page of <b>MClient ReSign</b> (AEE), an open-source tool to explore and navigate through the contents of any installed APK file on an Android device.This page explains the basic usage of AEE in detail.</tab1></p>
 
 This page includes the following contents.
 <ul>
@@ -11,11 +11,11 @@ This page includes the following contents.
     <li>Signing with a custom key</li>
 </ul>
 
-<h2 style="color: blue">User Interface</h2>
+<h2 style="color: red">User Interface</h2>
 
 The main user interface of AEE is categorized into a number of pages, and are
 
-<h3 style="color: blue">1. Installed Apps</h3>
+<h3 style="color: red">1. Installed Apps</h3>
 
 <p style="text-align: justify;"><tab1>This page will by default load all the installed application on your device. AEE also allow offers a separate view of <b>System</b> and <b>User</b> apps. The following tasks are allowed on this page.</tab1></p>
 
@@ -29,11 +29,11 @@ The main user interface of AEE is categorized into a number of pages, and are
     <li>Alternately, long clicking on an entry on the main screen will allow users to simply export (with or without signing with AEE custom key) APK's/App bundles into device storage.</li>
 </ol>
 
-<h3 style="color: blue">2. Projects</h3>
+<h3 style="color: red">2. Projects</h3>
 
 <p style="text-align: justify;"><tab1>This page lists all the applications (including the uninstalled ones) that are already explored from the first page, provided the user decided to retain the explored data upon asking (app will prompt when closing a project). This page also allows almost all the tasks that are available in the previous page. Additionally, long-clicking an item on this page will allow making a copy of the entire project folder of the selected app into device storage.</tab1></p>
 
-<h3 style="color: blue">3. Extracted APK's</h3>
+<h3 style="color: red">3. Extracted APK's</h3>
 
 <p style="text-align: justify;"><tab1>This page lists all the APK's/App bundles created on the first page. Various tasks that are allowed on this page are</tab1></p>
 
@@ -45,23 +45,23 @@ The main user interface of AEE is categorized into a number of pages, and are
 
 <p style="text-align: justify;"><tab1>Additionally, this page is also equipped with a feature-rich APK/Split APK/App bundle installer. AEE Split APK installer handles normal APK's, split APK's as well as xapk, apks and apkm app bundles. In order to initialize an installation, simply click the installer button on the top to select the installation file(s) and follow onscreen instructions.</tab1></p>
 
-<h3 style="color: blue">4. About</h3>
+<h3 style="color: red">4. About</h3>
 
 <p style="text-align: justify;"><tab1>Shows very basic information about the development of this project. It includes links to visit the source code of AEE, Telegram support group etc.</tab1></p>
 
-<h3 style="color: blue">5. Settings</h3>
+<h3 style="color: red">5. Settings</h3>
 
 <p style="text-align: justify;"><tab1>The <b>Settings</b> menu of AEE is bundled with a number of options that are designed to ease the use of the app.</tab1></p>
 
-<h2 style="color: blue">APK Signing</h2>
+<h2 style="color: red">APK Signing</h2>
 
 <p style="text-align: justify;"><tab1>AEE will recognize APK files and app bundles and sign them accordingly with its default key. In order to sign an APK using a custom Keystore, some specific methods need to be followed and are explained in the next section.</tab1></p>
 
-<h2 style="color: blue">Signing with a custom key</h2>
+<h2 style="color: red">Signing with a custom key</h2>
 
 <p style="text-align: justify;"><tab1>AEE uses PseudoApkSigner library by Aefyr to sign APK's. As a result, AEE requires a <b>private key</b> in pk8 format as well as an <b>RSA template</b> file created from the same key.</tab1></p>
 
-<h3 style="color: blue">How to create private key</h3>
+<h3 style="color: red">How to create private key</h3>
 
 <ol>
     <li>Convert a java keystore (JKS) to PKCS12 format<br><br><b>keytool -importkeystore -srckeystore KEYSTORE_PATH -destkeystore intermediate.p12 -srcstoretype JKS -deststoretype PKCS12</b><br><br></li>
@@ -69,7 +69,7 @@ The main user interface of AEE is categorized into a number of pages, and are
     <li>Finally convert pem to pk8 format<br><br><b>openssl pkcs8 -topk8 -outform DER -in intermediate.rsa.pem -inform PEM -out private.pk8 -nocrypt</b><br></li>
 </ol>
 
-<h3 style="color: blue">How to create RSA template</h3>
+<h3 style="color: red">How to create RSA template</h3>
 
 <ol>
     <li>Prepare a signed APK with jarsigner using the key to be later used as RSA template<br><br><b>jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore KEYSTORE_PATH APK_PATH alias_name</b><br><br></li>
@@ -77,7 +77,7 @@ The main user interface of AEE is categorized into a number of pages, and are
     <li>Remove last <b>X</b> bytes from the RSA certificate, where <b>X</b> equals the <b>RSA key size</b>. As an example, to remove the last 256 bytes from an RSA certificate, use the following command.<br><br><b><b>truncate --size=-256 RSA_CERT_PATH</b></b><br></li>
 </ol>
 
-<h3 style="color: blue">Configure AEE to work with custom key</h3>
+<h3 style="color: red">Configure AEE to work with custom key</h3>
 
 <p style="text-align: justify;"><tab1>Open AEE and Navigate to <b>Settings -> Sign APK's with</b> and select <b>Custom Key</b>. A new page will now open which allows users to select a custom <b>Private Key</b> and <b>RSA Template</b> using the in-built File picker. Use it! By doing so, AEE will do the following changes, and now onwards uses the new credentials for signing.</tab1></p>
 
