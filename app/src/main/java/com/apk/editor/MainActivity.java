@@ -1,4 +1,4 @@
-package com.apk.editor;
+package com.mclient.resigner;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
