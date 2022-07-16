@@ -1,4 +1,4 @@
-<b>APK Explorer & Editor</b> (AEE) includes a set of open-source tools mainly designed to explore the contents of an installed application on an Android device. Additionally, AEE offers a feature-rich APK/Split APK's/App bundle installer which allows users to pick and install files from device storage. <i>Please Note</i>: This is the full version of AEE. The Google Play version lacks editing capabilities as well as features such as APK/App Bundle signing.
+<b>MClient ReSign</b> (AEE fork) includes a set of open-source tools mainly designed to explore the contents of an installed application on an Android device. Additionally, AEE offers a feature-rich APK/Split APK's/App bundle installer which allows users to pick and install files from device storage. <i>Please Note</i>: This is the full version of AEE. The Google Play version lacks editing capabilities as well as features such as APK/App Bundle signing.
 
 <b>Features</b>
 
