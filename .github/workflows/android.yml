@@ -25,8 +25,14 @@ jobs:
      - name: Build Project
        run: ./gradlew assemble
        
-     - name: Android CI can suck my dick
+     - name: Build Debug .apk
+       run: |
+        # Build the launcher
+        ./gradlew :app_mclientresign:assembleDebug
+        mv app_mclientresign/build/outputs/apk/debug/app_mclientresign-debug.apk out/app-debug.apk
+       
+     - name: Upload APK
        uses: actions/upload-artifact@v2
        with:
-        name: devDebug Application
-        path: ./app/build/outputs/apk/dev/debug/app-dev-debug.apk
+          name: app-debug
+          path: out/app-debug.apk
