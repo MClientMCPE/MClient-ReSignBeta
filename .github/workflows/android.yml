@@ -29,7 +29,7 @@ jobs:
        run: |
         # Build the launcher
         ./gradlew :app:assembleDebug
-        mv app/build/outputs/apk/debug/app-debug.apk out/app-debug.apk
+        mv app
        
      - name: wtf
        uses: actions/upload-artifact@v2
