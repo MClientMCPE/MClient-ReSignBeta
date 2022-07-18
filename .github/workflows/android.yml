@@ -14,24 +14,24 @@ jobs:
     steps:
      - uses: actions/checkout@v1
      
-     - name: Write permission for Gradlew
+     - name: shoot yourself
        run: chmod +x ./gradlew
      
-     - name: Set Up JDK
+     - name: stfu android
        uses: actions/setup-java@v1
        with:
          java-version: 11
        
-     - name: Build Project
+     - name: bruh
        run: ./gradlew assemble
        
-     - name: Build Debug .apk
+     - name: i hate ci
        run: |
         # Build the launcher
-        ./gradlew :mclientresign:assembleDebug
-        mv mclientresign/build/outputs/apk/debug/mclientresign-debug.apk out/app-debug.apk
+        ./gradlew :app:assembleDebug
+        mv app/build/outputs/apk/debug/app-debug.apk out/app-debug.apk
        
-     - name: Upload APK
+     - name: wtf
        uses: actions/upload-artifact@v2
        with:
           name: app-debug
